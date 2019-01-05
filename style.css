@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* variable colors */
+:root {
+    --gray: #899495;
+    --white: rgb(238, 241, 195);
+}
+/* navbar */
+nav > ul  {
+    display: flex;
+    background: var(--gray);
+    padding: 0.5rem 0; 
+}
+nav > ul > li {
+    list-style: none;
+    display: inline-block;
+}
+nav > ul > li > a {
+    text-decoration: none;
+    padding-right: 3rem;
+    color: var(--white);
+}
+#brand {
+    flex: 1;
+    padding-left: 3rem;
+}
+/* end of navbar */
