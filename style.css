@@ -9,29 +9,43 @@
     --white: rgb(238, 241, 195);
 }
 /* navbar */
-nav {
-    border-bottom: 0.5rem solid black;
-    background: var(--gray);
+.navbar {
+    font-size: 1.125rem;
+    background: blue;
+    padding-bottom: 0.625rem;
+    border-bottom: 0.1rem solid black;
 }
-nav > ul  {
-    display: flex;
-    padding: 0.5rem 0;
-    align-items: center; 
+.main-nav {
+    list-style-type: none;
+    /* display: none; */
+    height: 0rem;
+    overflow: hidden;
+    transition: all 1s linear; 
 }
-nav > ul > li {
-    list-style: none;
-    display: block;
-    justify-items: flex-end;
-}
-nav > ul > li > a {
+.active {
+    /* display: block; */
+    height: 10rem;
+  }
+.nav-links, .logo {
     text-decoration: none;
-    padding-right: 3rem;
-    color: var(--white);
+    color: rgba(255,255,255,0.7);
 }
-#brand {
-    flex: 1;
-    padding-left: 1rem;
-    
+.main-nav li {
+    text-align: center;
+    margin: 1rem;
+}
+.logo {
+    display: inline-block;
+    margin-top: 0.625rem;
+    margin-left: 1.25rem;
+}
+.navbar-toggle {
+    position: absolute;
+    top: 0.625rem;
+    right: 1.25rem;
+    cursor: pointer;
+    color: rgba(255,255,255,0.8);
+    font-size: 1.5rem;
 }
 .fa-brain {
     color: rgb(26, 156, 54);
@@ -42,6 +56,42 @@ nav > ul > li > a {
 .fa-brain:hover {
     color: gray;
 }
+/* start of nav desktop */
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 4.5rem;
+        align-items: center;
+        border-bottom: 0.3rem solid black;
+    }
+    .main-nav {
+        display: flex;
+        margin-right: 2rem;
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 100%;
+        transition: none;
+    }
+    .main-nav li {
+        margin: 0;
+        align-self: center;
+    }
+    .nav-links {
+        margin-left: 2.5rem;
+    }
+    .logo {
+        margin-top: 0;
+    }
+    .navbar-toggle {
+        display: none;
+    }
+    .logo:hover, .nav-links:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+}
+/* end of nav desktop */
 /* end of navbar */
 
 /* start of header */
